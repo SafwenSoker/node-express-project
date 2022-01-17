@@ -1,0 +1,1 @@
+The result of writeFileSync to write test.txt file and first.txt in the same file : test.Txt   ldkfjdlkf  this is first text file
