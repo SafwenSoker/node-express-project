@@ -6,7 +6,7 @@ setTimeout(() => {
 console.log("Third task");
 
 console.log("Task after the setInterval");
-const { readFile, writeFile } = require("fs");
+const { readFile, writeFile } = require("fs").promises;
 //listen is asynchronous
 const http = require("http")
 const server = http.createServer((req, res) => {
@@ -15,17 +15,18 @@ const server = http.createServer((req, res) => {
 // server.listen(5000, () => {
 //     console.log("Server listening on port 5000....");
 // })
-const util = require('util')
-
-const readFilePromise = util.promisify(readFile)
-const writeFilePromise = util.promisify(writeFile)
+// const util = require('util')
+// const readFilePromise = util.promisify(readFile)
+// const writeFilePromise = util.promisify(writeFile)
 
 
 const start = async () => {
     try {
-        var first = await readFilePromise("./content/first.txt", "utf-8")
-        var second = await readFilePromise("./content/second.txt", "utf-8")
-        await writeFilePromise("./content/await-file-result.txt", `This is the await file result  ${first} ${second}`)
+        var first = await readFile("./content/first.txt", "utf-8")
+        var second = await readFile("./content/second.txt", "utf-8")
+        await writeFile("./content/await-file-result.txt",
+            `This is the await file result version 3 (added apend flag) with filesystem promises ${first} ${second}`
+            , { flag: "a" })
         console.log(first, second);
     } catch (err) {
         console.log(err);

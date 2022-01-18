@@ -1,1 +1,1 @@
-This is the await file result  this is first text file this is second text file
+This is the await file result version 2 with filesystem promises this is first text file this is second text fileThis is the await file result version 3 (added apend flag) with filesystem promises this is first text file this is second text file
