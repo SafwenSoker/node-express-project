@@ -15,3 +15,14 @@ const sayHi = (name) => {
 sayHi("Amine")
 sayHi(names.safwen)
 sayHi(names.amine)
+const http = require("http")
+var server = http.createServer((req, res) => {
+
+    for (let i = 0; i < 5; i++) {
+        if (req.url === `/user/${i}`) {
+            res.end(`User ${i} details`)
+        }
+
+    }
+})
+server.listen(5000)

@@ -1,16 +1,23 @@
 {
-  "name": "nodepr",
+  "name": "nodeProject",
   "version": "1.0.0",
-  "description": "",
-  "main": "alternative-flavot.js",
+  "description": "Learning nodejs",
+  "main": "alternative.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SafwenSoker/nodeProject.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SafwenSoker/nodeProject/issues"
+  },
+  "homepage": "https://github.com/SafwenSoker/nodeProject#readme",
   "dependencies": {
-    "bootstrap": "^5.1.3",
     "lodash": "^4.17.21"
   }
 }
