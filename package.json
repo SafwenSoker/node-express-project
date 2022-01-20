@@ -18,9 +18,9 @@
   },
   "homepage": "https://github.com/SafwenSoker/nodeProject#readme",
   "dependencies": {
-    "lodash": "^4.17.21"
-  },
-  "devDependencies": {
+    "express": "^4.17.2",
+    "lodash": "^4.17.21",
     "nodemon": "^2.0.15"
-  }
+  },
+  "devDependencies": {}
 }
