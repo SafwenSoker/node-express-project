@@ -49,6 +49,29 @@ app.get("/api/products/price/:productPrice", (req, res) => {
     res.json(singleProduct)
 })
 
+// app.get("/api/route/query", (req, res) => {
+//     console.log(req.query);
+//     res.send("Hello World")
+// })
+
+app.get("/api/route/query", (req, res) => {
+    const { search, limit } = req.query
+    let productsList = [...products]
+
+    if (search) {
+        productsList = productsList.filter((product) => {
+            return product.name.startsWith(search)
+        })
+    }
+    if (limit) {
+        productsList = productsList.slice(0, Number(limit))
+    }
+    res.status(200).json(productsList)
+    res.send("Hello World")
+})
+
+
+
 app.listen(5000)
 
 
